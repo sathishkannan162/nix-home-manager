@@ -46,7 +46,6 @@
     ffmpeg
     paru
     # code-cursor # there are some font issues. use paru -S cursor-bin
-    nerd-fonts.jetbrains-mono
     fzf
     python3
     nodejs_22
@@ -54,6 +53,13 @@
     podman # add alias docker=podman
     go
     rustup
+    yazi
+    tmux
+    
+    #fonts
+    nerd-fonts.jetbrains-mono
+    noto-fonts-emoji
+    twemoji-color-font
     
   ];
 
