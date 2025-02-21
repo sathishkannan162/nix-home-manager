@@ -19,7 +19,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -36,13 +36,18 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-  	pkgs.neovim
-	  pkgs.htop
-	  pkgs.curl
-	  pkgs.wget
-  	pkgs.ffmpeg
-	pkgs.paru
-	# pkgs.code-cursor # there are some font issues. use paru -S cursor-bin
+  	neovim
+	htop
+	curl
+	wget
+  	ffmpeg
+	paru
+	# code-cursor # there are some font issues. use paru -S cursor-bin
+	nerd-fonts.jetbrains-mono
+	fzf
+	python3
+	nodejs_22
+	docker
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -59,6 +64,16 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
   };
+
+  fonts = {
+  fontconfig.enable = true;
+  fontconfig.defaultFonts = {
+    monospace = [ "JetBrainsMono Nerd Font" ];
+    sansSerif = [ "JetBrainsMono Nerd Font" ];
+    serif = [ "JetBrainsMono Nerd Font" ];
+  };
+ };
+
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
@@ -82,4 +97,5 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  virtualisation.docker.enable = true;
 }
