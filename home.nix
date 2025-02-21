@@ -5,7 +5,8 @@
   # manage.
   home.username = "sathish";
   home.homeDirectory = "/home/sathish";
-  targets.genericLinux.enable= true;
+  targets.genericLinux.enable = true;
+  nixpkgs.config.allowUnfree = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -36,9 +37,12 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   	pkgs.neovim
-	pkgs.htop
-	pkgs.curl
-	pkgs.wget
+	  pkgs.htop
+	  pkgs.curl
+	  pkgs.wget
+  	pkgs.ffmpeg
+	pkgs.paru
+	# pkgs.code-cursor # there are some font issues. use paru -S cursor-bin
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -78,5 +82,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
 }

@@ -13,6 +13,9 @@
   outputs = { nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
+      config = {
+	allowUnfree= true;
+      };
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations."sathish" = home-manager.lib.homeManagerConfiguration {
