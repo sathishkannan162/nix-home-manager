@@ -38,6 +38,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    git
     neovim
     htop
     curl
@@ -49,8 +50,11 @@
     fzf
     python3
     nodejs_22
+    pnpm
     podman # add alias docker=podman
     go
+    rustup
+    
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
