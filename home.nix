@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "sathish";
@@ -36,18 +38,19 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-  	neovim
-	htop
-	curl
-	wget
-  	ffmpeg
-	paru
-	# code-cursor # there are some font issues. use paru -S cursor-bin
-	nerd-fonts.jetbrains-mono
-	fzf
-	python3
-	nodejs_22
-	docker
+    neovim
+    htop
+    curl
+    wget
+    ffmpeg
+    paru
+    # code-cursor # there are some font issues. use paru -S cursor-bin
+    nerd-fonts.jetbrains-mono
+    fzf
+    python3
+    nodejs_22
+    podman # add alias docker=podman
+    go
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -66,14 +69,13 @@
   };
 
   fonts = {
-  fontconfig.enable = true;
-  fontconfig.defaultFonts = {
-    monospace = [ "JetBrainsMono Nerd Font" ];
-    sansSerif = [ "JetBrainsMono Nerd Font" ];
-    serif = [ "JetBrainsMono Nerd Font" ];
+    fontconfig.enable = true;
+    fontconfig.defaultFonts = {
+      monospace = ["JetBrainsMono Nerd Font"];
+      sansSerif = ["JetBrainsMono Nerd Font"];
+      serif = ["JetBrainsMono Nerd Font"];
+    };
   };
- };
-
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
@@ -97,5 +99,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  virtualisation.docker.enable = true;
 }
