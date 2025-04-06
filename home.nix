@@ -55,11 +55,19 @@
     rustup
     yazi
     tmux
+    gnome-clocks
+    zoxide
+    
+    # ghostty # throwing egl display error
+    taskwarrior-tui
+    taskwarrior3
+    vscode
     
     #fonts
     nerd-fonts.jetbrains-mono
     noto-fonts-emoji
     twemoji-color-font
+    
     
   ];
 
