@@ -57,6 +57,9 @@
     tmux
     gnome-clocks
     zoxide
+    cliphist
+    dmenu
+    rofi
     
     # ghostty # throwing egl display error
     taskwarrior-tui
