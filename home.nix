@@ -58,6 +58,7 @@
     gnome-clocks
     zoxide
     less
+    btop
 
     # desktop utils
     brightnessctl
@@ -67,6 +68,7 @@
     dmenu
     rofi
     # timeshift # it is not working well with sudo when installed via nix
+  
     
     # ghostty # throwing egl display error
     taskwarrior-tui
@@ -77,7 +79,6 @@
     nerd-fonts.jetbrains-mono
     noto-fonts-emoji
     twemoji-color-font
-    
     
   ];
 
