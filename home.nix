@@ -57,12 +57,16 @@
     tmux
     gnome-clocks
     zoxide
+    less
+
+    # desktop utils
+    brightnessctl
+    hyprshot
     wl-clipboard
     cliphist
     dmenu
     rofi
-    less
-    timeshift
+    # timeshift # it is not working well with sudo when installed via nix
     
     # ghostty # throwing egl display error
     taskwarrior-tui
