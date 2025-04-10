@@ -68,17 +68,22 @@
     dmenu
     rofi
     # timeshift # it is not working well with sudo when installed via nix
-  
-    
+
     # ghostty # throwing egl display error
     taskwarrior-tui
     taskwarrior3
     vscode
-    
+
     #fonts
     nerd-fonts.jetbrains-mono
     noto-fonts-emoji
     twemoji-color-font
+
+    # whatsapp-for-linux
+    slack
+    discord
+    # clickup
+    
     
   ];
 
