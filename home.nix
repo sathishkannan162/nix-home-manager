@@ -82,7 +82,9 @@
     # whatsapp-for-linux
     slack
     discord
+    obsidian
     # clickup
+    gnome-disk-utility
     
     
   ];
