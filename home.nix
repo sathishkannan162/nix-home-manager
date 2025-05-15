@@ -85,6 +85,9 @@
     obsidian
     # clickup
     gnome-disk-utility
+    zathura
+    libreoffice-qt
+    hunspell
     
     
   ];
