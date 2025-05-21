@@ -88,6 +88,10 @@
     zathura
     libreoffice-qt
     hunspell
+    feh
+    php
+    php84Packages.composer
+    php84Extensions.mongodb
     
     
   ];
