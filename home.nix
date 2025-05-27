@@ -89,9 +89,11 @@
     libreoffice-qt
     hunspell
     feh
-    php
-    php84Packages.composer
-    php84Extensions.mongodb
+    # blender
+    # davinci-resolve
+    # php
+    # php84Packages.composer
+    # php84Extensions.mongodb
     
     
   ];
